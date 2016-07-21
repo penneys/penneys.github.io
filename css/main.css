@@ -99,6 +99,12 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+.wrapper {
+    width: 40em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .title {
     text-align: center;
     font-size: 3em;
@@ -122,12 +128,12 @@ button {
     font-family: "Lato", sans-serif;
     font-size: 1.5em;
     height: 4rem;
-    width: 20rem; /* The width of the two visual columns of the site. */
     border: none;
     margin: 2em 0;
 }
 
 .positive-button {
+    width: 50%;
     background-color: #2a2;
     font-weight: bold;
 }
@@ -138,6 +144,7 @@ button {
 }
 
 .negative-button {
+    width: 50%;
     background-color: #a22;
     font-weight: bold;
 }
@@ -153,7 +160,7 @@ button {
 
 table {
     table-layout: fixed;
-    width: 40rem;
+    width: 100%;
     margin: 0 auto;
 }
 
