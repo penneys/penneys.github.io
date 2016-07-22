@@ -115,8 +115,10 @@ body {
 }
 
 .sequence {
+    width: 80%;
+    margin: 2em auto;
     white-space: nowrap;
-    font-size: 2em;
+    overflow-x: hidden;
 }
 
 .history {

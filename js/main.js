@@ -53,7 +53,14 @@ function updateScoreboard(player, computer) {
     document.getElementById("playerSequence").innerHTML = stringFromCoinSequence(player.sequence);
     document.getElementById("playerScore").innerHTML = player.score.toString();
     document.getElementById("computerSequence").innerHTML = stringFromCoinSequence(computer.sequence);
-    document.getElementById("computerScore").innerText = computer.score.toString();
+    document.getElementById("computerScore").innerHTML = computer.score.toString();
+}
+
+function updateSequenceWindow(history) {
+    var element = document.getElementById("sequenceWindow");
+    element.hidden = false;
+    element.innerHTML = stringFromCoinSequence(history);
+    element.scrollLeft = element.scrollWidth;
 }
 
 function updateGame(currentTime) {
@@ -67,6 +74,7 @@ function updateGame(currentTime) {
         if (game.lastUpdate + UPDATE_INTERVAL <= currentTime) {
             game.lastUpdate = currentTime;
             game.history.push(tossCoin());
+            updateSequenceWindow(game.history);
             if (game.history.length >= 3) {
                 const lastThreeTosses = game.history.slice(-3);
                 if (coinSequenceEquals(game.player.sequence, lastThreeTosses)) {
