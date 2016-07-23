@@ -43,48 +43,82 @@
 
         <div class="centered"><p>Pick your sequence and press the button.</p></div>
 
-        <div class="centered">
-            <input id="firstHeads" type="radio" name="first" value="heads" checked>
-            <label for="firstHeads">Heads</label>
-            <input id="firstTails" type="radio" name="first" value="tails">
-            <label for="firstTails">Tails</label>
-        </div>
-        <div class="centered">
-            <input id="secondHeads" type="radio" name="second" value="heads" checked>
-            <label for="secondHeads">Heads</label>
-            <input id="secondTails" type="radio" name="second" value="tails">
-            <label for="secondTails">Tails</label>
-        </div>
-        <div class="centered">
-            <input id="thirdHeads" type="radio" name="third" value="heads" checked>
-            <label for="thirdHeads">Heads</label>
-            <input id="thirdTails" type="radio" name="third" value="tails">
-            <label for="thirdTails">Tails</label>
-        </div>
+        <table id="settings">
+            <tr>
+                <td><b>First Coin</b></td>
+                <td>
+                    <input id="firstHeads" type="radio" name="first" value="heads" checked>
+                    <label for="firstHeads">Heads</label>
+                </td>
+                <td>
+                    <input id="firstTails" type="radio" name="first" value="tails">
+                    <label for="firstTails">Tails</label>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Second Coin</b></td>
+                <td>
+                    <input id="secondHeads" type="radio" name="second" value="heads" checked>
+                    <label for="secondHeads">Heads</label>
+                </td>
+                <td>
+                    <input id="secondTails" type="radio" name="second" value="tails">
+                    <label for="secondTails">Tails</label>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Third Coin</b></td>
+                <td>
+                    <input id="thirdHeads" type="radio" name="third" value="heads" checked>
+                    <label for="thirdHeads">Heads</label>
+                </td>
+                <td>
+                    <input id="thirdTails" type="radio" name="third" value="tails">
+                    <label for="thirdTails">Tails</label>
+                </td>
+            </tr>
+        </table>
 
         <div class="centered">
             <button id="goButton" type="button" class="positive-button">Go</button><button id="stopButton" type="button" class="negative-button" disabled>Stop</button>
         </div>
 
-        <table id="scoreboard" hidden>
-            <tr>
-                <th></th>
-                <th>Sequence</th>
-                <th>Score</th>
-            </tr>
-            <tr>
-                <td>Player</td>
-                <td id="playerSequence"></td>
-                <td id="playerScore"></td>
-            </tr>
-            <tr>
-                <td>Computer</td>
-                <td id="computerSequence"></td>
-                <td id="computerScore"></td>
-            </tr>
-        </table>
+        <div id="reporting" hidden>
+            <h1>Results</h1>
+            <table id="scoreboard">
+                <tr>
+                    <th>Competitor</th>
+                    <th>Sequence</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>Player</td>
+                    <td id="playerSequence"></td>
+                    <td id="playerScore"></td>
+                </tr>
+                <tr>
+                    <td>Computer</td>
+                    <td id="computerSequence"></td>
+                    <td id="computerScore"></td>
+                </tr>
+            </table>
 
-        <pre id="sequenceWindow" class="sequence" hidden></pre>
+            <h2>History</h2>
+            <pre id="sequenceWindow" class="sequence">History not available.</pre>
+        </div>
+
+        <h1>Simulation Settings</h1>
+        <h2>Simulation Speed</h2>
+        <ul class="clear-list">
+            <li>
+                <input id="radioSlow" type="radio" name="speed" value="slow" checked>
+                <label for="radioSlow">Slow</label>
+            </li>
+            <li>
+                <input id="radioFast" type="radio" name="speed" value="fast">
+                <label for="radioFast">Fast</label>
+            </li>
+        </ul>
         </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

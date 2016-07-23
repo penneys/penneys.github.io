@@ -99,6 +99,10 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 0.5rem;
+}
+
 .wrapper {
     width: 40em;
     max-width: 100%;
@@ -114,16 +118,23 @@ body {
     text-align: center;
 }
 
-.sequence {
-    width: 80%;
-    margin: 2em auto;
-    white-space: nowrap;
-    overflow-x: hidden;
+.settings {
+    text-align: justify;
 }
 
-.history {
-    white-space: nowrap;
-    overflow-x: scroll;
+table {
+    table-layout: fixed;
+    width: 100%;
+    margin: 0 auto;
+}
+
+tr, td, th {
+    text-align: center;
+    border: 0;
+}
+
+.settings > label {
+    margin: 0 auto;
 }
 
 button {
@@ -131,7 +142,7 @@ button {
     font-size: 1.5em;
     height: 4rem;
     border: none;
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .positive-button {
@@ -160,15 +171,15 @@ button {
     width: 20em;
 }
 
-table {
-    table-layout: fixed;
-    width: 100%;
-    margin: 0 auto;
+.sequence {
+    width: 80%;
+    margin: 2em auto;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
 
-tr, td, th {
-    text-align: center;
-    border: 0;
+.clear-list {
+    list-style-type: none;
 }
 
 /* ==========================================================================
